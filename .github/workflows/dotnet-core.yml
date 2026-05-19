@@ -40,5 +40,8 @@ jobs:
     - name: Publish library (NuGet)
       if: env.NUGET_API_KEY != ''
       run: dotnet nuget push *.nupkg --api-key "$NUGET_API_KEY" --source "https://api.nuget.org/v3/index.json" --skip-duplicate
+    - name: Publish skipped (NuGet)
+      if: env.NUGET_API_KEY == ''
+      run: echo "NUGET_API_KEY repository secret is not configured; skipping NuGet publish."
     #- name: Publish library (Github)
     #  run: dotnet nuget push *.nupkg --api-key ${{secrets.PUBLISH_TO_GITHUB_TOKEN}} --source "https://nuget.pkg.github.com/marfusios/index.json" --skip-duplicate
