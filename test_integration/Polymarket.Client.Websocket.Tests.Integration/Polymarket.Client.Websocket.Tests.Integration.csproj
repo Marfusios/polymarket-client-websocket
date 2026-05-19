@@ -20,6 +20,7 @@
 
 	<ItemGroup>
 		<None Include="data\polymarket_raw_sample.txt" CopyToOutputDirectory="PreserveNewest" />
+		<None Include="data\polymarket_public_replay.txt" CopyToOutputDirectory="PreserveNewest" />
 	</ItemGroup>
 
 </Project>

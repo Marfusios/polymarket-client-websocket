@@ -1,4 +1,4 @@
-![Logo](polymarket-logo.png)
+![Logo](https://raw.githubusercontent.com/Marfusios/polymarket-client-websocket/master/polymarket-logo.png)
 # Polymarket websocket API client
 
 [![NuGet version](https://img.shields.io/nuget/v/Polymarket.Client.Websocket?style=flat-square)](https://www.nuget.org/packages/Polymarket.Client.Websocket)
@@ -27,7 +27,7 @@ Apache License 2.0
 - built on [Websocket.Client 5.5.0](https://www.nuget.org/packages/Websocket.Client/5.5.0) for websocket transport, reconnects, and lower-allocation message handling
 - typed response models: Polymarket stringified prices/sizes are parsed to `decimal`, timestamps to integer values, and known sides/statuses/topics to enums
 - reactive extensions ([Rx.NET](https://github.com/Reactive-Extensions/Rx.NET))
-- file communicator for replay/backtesting and data collection pipelines
+- file communicator for replay/backtesting and data collection pipelines, with tests covering collected public market and RTDS websocket frames
 
 ### Usage
 
