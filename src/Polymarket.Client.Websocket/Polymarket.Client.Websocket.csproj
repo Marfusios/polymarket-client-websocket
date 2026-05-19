@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>netstandard2.0;netstandard2.1;net6.0;net7.0;net8.0;net9.0;net10.0</TargetFrameworks>
+		<PackageId>Polymarket.Client.Websocket</PackageId>
+		<Authors>Mariusz Kotas</Authors>
+		<Description>Client for Polymarket websocket APIs</Description>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<PackageReleaseNotes>Initial release with Polymarket market, user, sports, and RTDS websocket streams.</PackageReleaseNotes>
+		<Copyright>Copyright 2026 Mariusz Kotas. All rights reserved.</Copyright>
+		<PackageTags>Polymarket websockets websocket client prediction markets orderbook trades</PackageTags>
+		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+		<PackageProjectUrl>https://github.com/Marfusios/polymarket-client-websocket</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/Marfusios/polymarket-client-websocket</RepositoryUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryType>Git</RepositoryType>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+		<GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<Nullable>annotations</Nullable>
+		<LangVersion>latest</LangVersion>
+		<NoWarn>1591</NoWarn>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+		<PackageReference Include="System.Reactive" Version="6.1.0" />
+		<PackageReference Include="Websocket.Client" Version="5.5.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
+
+</Project>
