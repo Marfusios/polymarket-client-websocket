@@ -1,3 +1,4 @@
+![Logo](polymarket-logo.png)
 # Polymarket websocket API client
 
 [![NuGet version](https://img.shields.io/nuget/v/Polymarket.Client.Websocket?style=flat-square)](https://www.nuget.org/packages/Polymarket.Client.Websocket)

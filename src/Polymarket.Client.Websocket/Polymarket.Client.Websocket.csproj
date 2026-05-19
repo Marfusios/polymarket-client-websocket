@@ -11,6 +11,8 @@
 		<PackageTags>Polymarket websockets websocket client prediction markets orderbook trades</PackageTags>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/Marfusios/polymarket-client-websocket</PackageProjectUrl>
+		<PackageIconUrl>https://raw.githubusercontent.com/Marfusios/polymarket-client-websocket/master/src/Polymarket.Client.Websocket/icon.png</PackageIconUrl>
+		<PackageIcon>icon.png</PackageIcon>
 		<RepositoryUrl>https://github.com/Marfusios/polymarket-client-websocket</RepositoryUrl>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryType>Git</RepositoryType>
@@ -31,7 +33,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<None Include="icon.png" Pack="true" PackagePath="" />
 		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+		<None Include="..\..\polymarket-logo.png" Pack="true" PackagePath="\" />
 	</ItemGroup>
 
 </Project>
