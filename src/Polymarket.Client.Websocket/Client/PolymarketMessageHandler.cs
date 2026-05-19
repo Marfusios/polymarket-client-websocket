@@ -1,6 +1,7 @@
 using System;
 using Microsoft.Extensions.Logging;
 using Newtonsoft.Json.Linq;
+using Polymarket.Client.Websocket.Enums;
 using Polymarket.Client.Websocket.Json;
 using Polymarket.Client.Websocket.Responses;
 using Polymarket.Client.Websocket.Responses.Market;
@@ -140,7 +141,7 @@ namespace Polymarket.Client.Websocket.Client
                     Publish(message.Payload, _streams.RtdsCryptoPriceSubject);
                     break;
                 case "equity_prices":
-                    if (string.Equals(message.Type, "subscribe", StringComparison.OrdinalIgnoreCase))
+                    if (message.Type == RtdsMessageType.Subscribe)
                     {
                         Publish(message.Payload, _streams.RtdsEquitySnapshotSubject);
                     }

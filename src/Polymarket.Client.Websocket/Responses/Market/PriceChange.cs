@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using Polymarket.Client.Websocket.Enums;
 
 namespace Polymarket.Client.Websocket.Responses.Market
 {
@@ -17,19 +18,19 @@ namespace Polymarket.Client.Websocket.Responses.Market
         /// Price.
         /// </summary>
         [JsonProperty("price")]
-        public string Price { get; set; }
+        public decimal Price { get; set; }
 
         /// <summary>
         /// Size.
         /// </summary>
         [JsonProperty("size")]
-        public string Size { get; set; }
+        public decimal Size { get; set; }
 
         /// <summary>
         /// Side, BUY or SELL.
         /// </summary>
         [JsonProperty("side")]
-        public string Side { get; set; }
+        public PolymarketOrderSide Side { get; set; }
 
         /// <summary>
         /// Orderbook hash.
@@ -41,12 +42,12 @@ namespace Polymarket.Client.Websocket.Responses.Market
         /// Best bid after the update.
         /// </summary>
         [JsonProperty("best_bid")]
-        public string BestBid { get; set; }
+        public decimal BestBid { get; set; }
 
         /// <summary>
         /// Best ask after the update.
         /// </summary>
         [JsonProperty("best_ask")]
-        public string BestAsk { get; set; }
+        public decimal BestAsk { get; set; }
     }
 }

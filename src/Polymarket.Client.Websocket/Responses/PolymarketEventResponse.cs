@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Polymarket.Client.Websocket.Enums;
 
 namespace Polymarket.Client.Websocket.Responses
 {
@@ -13,7 +14,7 @@ namespace Polymarket.Client.Websocket.Responses
         /// Event type.
         /// </summary>
         [JsonProperty("event_type")]
-        public string EventType { get; set; }
+        public PolymarketEventType EventType { get; set; }
 
         /// <summary>
         /// Unknown fields preserved for forward compatibility.

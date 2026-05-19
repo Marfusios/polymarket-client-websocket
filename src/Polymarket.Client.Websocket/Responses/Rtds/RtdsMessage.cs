@@ -1,5 +1,6 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using Polymarket.Client.Websocket.Enums;
 
 namespace Polymarket.Client.Websocket.Responses.Rtds
 {
@@ -12,13 +13,13 @@ namespace Polymarket.Client.Websocket.Responses.Rtds
         /// Subscription topic.
         /// </summary>
         [JsonProperty("topic")]
-        public string Topic { get; set; }
+        public RtdsTopic Topic { get; set; }
 
         /// <summary>
         /// Message type.
         /// </summary>
         [JsonProperty("type")]
-        public string Type { get; set; }
+        public RtdsMessageType Type { get; set; }
 
         /// <summary>
         /// Unix timestamp in milliseconds.

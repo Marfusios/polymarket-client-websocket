@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using Polymarket.Client.Websocket.Enums;
 using Polymarket.Client.Websocket.Responses;
 
 namespace Polymarket.Client.Websocket.Responses.User
@@ -36,7 +37,7 @@ namespace Polymarket.Client.Websocket.Responses.User
         /// Side, BUY or SELL.
         /// </summary>
         [JsonProperty("side")]
-        public string Side { get; set; }
+        public PolymarketOrderSide Side { get; set; }
 
         /// <summary>
         /// Order owner.
@@ -48,19 +49,19 @@ namespace Polymarket.Client.Websocket.Responses.User
         /// Original size.
         /// </summary>
         [JsonProperty("original_size")]
-        public string OriginalSize { get; set; }
+        public decimal OriginalSize { get; set; }
 
         /// <summary>
         /// Matched size.
         /// </summary>
         [JsonProperty("size_matched")]
-        public string SizeMatched { get; set; }
+        public decimal SizeMatched { get; set; }
 
         /// <summary>
         /// Price.
         /// </summary>
         [JsonProperty("price")]
-        public string Price { get; set; }
+        public decimal Price { get; set; }
 
         /// <summary>
         /// Associated trades, if present.
@@ -78,31 +79,31 @@ namespace Polymarket.Client.Websocket.Responses.User
         /// Order event type.
         /// </summary>
         [JsonProperty("type")]
-        public string Type { get; set; }
+        public PolymarketOrderUpdateType Type { get; set; }
 
         /// <summary>
-        /// Creation timestamp.
+        /// Creation Unix timestamp in seconds.
         /// </summary>
         [JsonProperty("created_at")]
-        public string CreatedAt { get; set; }
+        public long CreatedAt { get; set; }
 
         /// <summary>
-        /// Expiration timestamp.
+        /// Expiration Unix timestamp in seconds.
         /// </summary>
         [JsonProperty("expiration")]
-        public string Expiration { get; set; }
+        public long Expiration { get; set; }
 
         /// <summary>
         /// Order type.
         /// </summary>
         [JsonProperty("order_type")]
-        public string OrderType { get; set; }
+        public PolymarketTimeInForce OrderType { get; set; }
 
         /// <summary>
         /// Order status.
         /// </summary>
         [JsonProperty("status")]
-        public string Status { get; set; }
+        public PolymarketOrderStatus Status { get; set; }
 
         /// <summary>
         /// Maker address.
@@ -111,9 +112,9 @@ namespace Polymarket.Client.Websocket.Responses.User
         public string MakerAddress { get; set; }
 
         /// <summary>
-        /// Event timestamp.
+        /// Event Unix timestamp in seconds.
         /// </summary>
         [JsonProperty("timestamp")]
-        public string Timestamp { get; set; }
+        public long Timestamp { get; set; }
     }
 }

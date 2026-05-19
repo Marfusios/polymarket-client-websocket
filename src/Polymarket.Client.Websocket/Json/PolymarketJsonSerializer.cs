@@ -17,6 +17,13 @@ namespace Polymarket.Client.Websocket.Json
             {
                 NamingStrategy = new SnakeCaseNamingStrategy()
             },
+            Converters =
+            {
+                new PolymarketDecimalConverter(),
+                new PolymarketLongConverter(),
+                new PolymarketIntConverter(),
+                new PolymarketDateTimeConverter()
+            },
             NullValueHandling = NullValueHandling.Ignore
         };
 

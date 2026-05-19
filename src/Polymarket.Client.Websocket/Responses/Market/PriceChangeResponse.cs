@@ -24,6 +24,6 @@ namespace Polymarket.Client.Websocket.Responses.Market
         /// Unix timestamp in milliseconds.
         /// </summary>
         [JsonProperty("timestamp")]
-        public string Timestamp { get; set; }
+        public long Timestamp { get; set; }
     }
 }

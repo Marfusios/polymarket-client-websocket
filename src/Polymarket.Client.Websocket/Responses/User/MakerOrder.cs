@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using Polymarket.Client.Websocket.Enums;
 
 namespace Polymarket.Client.Websocket.Responses.User
 {
@@ -29,19 +30,19 @@ namespace Polymarket.Client.Websocket.Responses.User
         /// Matched amount.
         /// </summary>
         [JsonProperty("matched_amount")]
-        public string MatchedAmount { get; set; }
+        public decimal MatchedAmount { get; set; }
 
         /// <summary>
         /// Price.
         /// </summary>
         [JsonProperty("price")]
-        public string Price { get; set; }
+        public decimal Price { get; set; }
 
         /// <summary>
         /// Fee rate in bps.
         /// </summary>
         [JsonProperty("fee_rate_bps")]
-        public string FeeRateBps { get; set; }
+        public decimal FeeRateBps { get; set; }
 
         /// <summary>
         /// Asset token ID.
@@ -59,6 +60,6 @@ namespace Polymarket.Client.Websocket.Responses.User
         /// Side, BUY or SELL.
         /// </summary>
         [JsonProperty("side")]
-        public string Side { get; set; }
+        public PolymarketOrderSide Side { get; set; }
     }
 }

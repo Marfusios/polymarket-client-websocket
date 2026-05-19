@@ -24,24 +24,24 @@ namespace Polymarket.Client.Websocket.Responses.Market
         /// Best bid.
         /// </summary>
         [JsonProperty("best_bid")]
-        public string BestBid { get; set; }
+        public decimal BestBid { get; set; }
 
         /// <summary>
         /// Best ask.
         /// </summary>
         [JsonProperty("best_ask")]
-        public string BestAsk { get; set; }
+        public decimal BestAsk { get; set; }
 
         /// <summary>
         /// Spread.
         /// </summary>
         [JsonProperty("spread")]
-        public string Spread { get; set; }
+        public decimal Spread { get; set; }
 
         /// <summary>
         /// Unix timestamp in milliseconds.
         /// </summary>
         [JsonProperty("timestamp")]
-        public string Timestamp { get; set; }
+        public long Timestamp { get; set; }
     }
 }

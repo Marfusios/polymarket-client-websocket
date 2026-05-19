@@ -1,5 +1,5 @@
+using System;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using Polymarket.Client.Websocket.Responses;
 
 namespace Polymarket.Client.Websocket.Responses.Market
@@ -13,7 +13,7 @@ namespace Polymarket.Client.Websocket.Responses.Market
         /// Market ID.
         /// </summary>
         [JsonProperty("id")]
-        public string Id { get; set; }
+        public long Id { get; set; }
 
         /// <summary>
         /// Market question.
@@ -55,13 +55,13 @@ namespace Polymarket.Client.Websocket.Responses.Market
         /// Parent event data.
         /// </summary>
         [JsonProperty("event_message")]
-        public JToken EventMessage { get; set; }
+        public NewMarketEventMessage EventMessage { get; set; }
 
         /// <summary>
         /// Unix timestamp in milliseconds.
         /// </summary>
         [JsonProperty("timestamp")]
-        public string Timestamp { get; set; }
+        public long Timestamp { get; set; }
 
         /// <summary>
         /// Market tags.
@@ -97,24 +97,60 @@ namespace Polymarket.Client.Websocket.Responses.Market
         /// Sports line, if present.
         /// </summary>
         [JsonProperty("line")]
-        public string Line { get; set; }
+        public decimal? Line { get; set; }
 
         /// <summary>
         /// Sports game start time, if present.
         /// </summary>
         [JsonProperty("game_start_time")]
-        public string GameStartTime { get; set; }
+        public DateTime? GameStartTime { get; set; }
 
         /// <summary>
         /// Minimum tick size.
         /// </summary>
         [JsonProperty("order_price_min_tick_size")]
-        public string OrderPriceMinTickSize { get; set; }
+        public decimal? OrderPriceMinTickSize { get; set; }
 
         /// <summary>
         /// Group item title.
         /// </summary>
         [JsonProperty("group_item_title")]
         public string GroupItemTitle { get; set; }
+    }
+
+    /// <summary>
+    /// Parent event data included in a new market event.
+    /// </summary>
+    public class NewMarketEventMessage
+    {
+        /// <summary>
+        /// Event ID.
+        /// </summary>
+        [JsonProperty("id")]
+        public string Id { get; set; }
+
+        /// <summary>
+        /// Event ticker.
+        /// </summary>
+        [JsonProperty("ticker")]
+        public string Ticker { get; set; }
+
+        /// <summary>
+        /// Event slug.
+        /// </summary>
+        [JsonProperty("slug")]
+        public string Slug { get; set; }
+
+        /// <summary>
+        /// Event title.
+        /// </summary>
+        [JsonProperty("title")]
+        public string Title { get; set; }
+
+        /// <summary>
+        /// Event description.
+        /// </summary>
+        [JsonProperty("description")]
+        public string Description { get; set; }
     }
 }

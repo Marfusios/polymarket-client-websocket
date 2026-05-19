@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using Polymarket.Client.Websocket.Enums;
 using Polymarket.Client.Websocket.Responses;
 
 namespace Polymarket.Client.Websocket.Responses.Market
@@ -24,31 +25,31 @@ namespace Polymarket.Client.Websocket.Responses.Market
         /// Trade price.
         /// </summary>
         [JsonProperty("price")]
-        public string Price { get; set; }
+        public decimal Price { get; set; }
 
         /// <summary>
         /// Trade size.
         /// </summary>
         [JsonProperty("size")]
-        public string Size { get; set; }
+        public decimal Size { get; set; }
 
         /// <summary>
         /// Fee rate in bps.
         /// </summary>
         [JsonProperty("fee_rate_bps")]
-        public string FeeRateBps { get; set; }
+        public decimal FeeRateBps { get; set; }
 
         /// <summary>
         /// Side, BUY or SELL.
         /// </summary>
         [JsonProperty("side")]
-        public string Side { get; set; }
+        public PolymarketOrderSide Side { get; set; }
 
         /// <summary>
         /// Unix timestamp in milliseconds.
         /// </summary>
         [JsonProperty("timestamp")]
-        public string Timestamp { get; set; }
+        public long Timestamp { get; set; }
 
         /// <summary>
         /// Transaction hash.

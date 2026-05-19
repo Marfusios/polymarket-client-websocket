@@ -33,6 +33,8 @@ namespace Polymarket.Client.Websocket.Tests.Integration
             Assert.NotNull(priceChange);
             Assert.Equal("condition-1", book.Market);
             Assert.Equal("condition-1", priceChange.Market);
+            Assert.Equal(0.48m, book.Bids[0].Price);
+            Assert.Equal(0.5m, priceChange.PriceChanges[0].Price);
         }
     }
 }

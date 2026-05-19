@@ -1,4 +1,5 @@
 using Newtonsoft.Json;
+using Polymarket.Client.Websocket.Enums;
 using Polymarket.Client.Websocket.Responses;
 
 namespace Polymarket.Client.Websocket.Responses.User
@@ -12,7 +13,7 @@ namespace Polymarket.Client.Websocket.Responses.User
         /// Trade type.
         /// </summary>
         [JsonProperty("type")]
-        public string Type { get; set; }
+        public PolymarketTradeEventType Type { get; set; }
 
         /// <summary>
         /// Trade ID.
@@ -42,43 +43,43 @@ namespace Polymarket.Client.Websocket.Responses.User
         /// Side, BUY or SELL.
         /// </summary>
         [JsonProperty("side")]
-        public string Side { get; set; }
+        public PolymarketOrderSide Side { get; set; }
 
         /// <summary>
         /// Size.
         /// </summary>
         [JsonProperty("size")]
-        public string Size { get; set; }
+        public decimal Size { get; set; }
 
         /// <summary>
         /// Price.
         /// </summary>
         [JsonProperty("price")]
-        public string Price { get; set; }
+        public decimal Price { get; set; }
 
         /// <summary>
         /// Fee rate in bps.
         /// </summary>
         [JsonProperty("fee_rate_bps")]
-        public string FeeRateBps { get; set; }
+        public decimal FeeRateBps { get; set; }
 
         /// <summary>
         /// Trade status.
         /// </summary>
         [JsonProperty("status")]
-        public string Status { get; set; }
+        public PolymarketTradeStatus Status { get; set; }
 
         /// <summary>
-        /// Match time.
+        /// Match Unix timestamp in seconds.
         /// </summary>
         [JsonProperty("matchtime")]
-        public string MatchTime { get; set; }
+        public long MatchTime { get; set; }
 
         /// <summary>
-        /// Last update timestamp.
+        /// Last update Unix timestamp in seconds.
         /// </summary>
         [JsonProperty("last_update")]
-        public string LastUpdate { get; set; }
+        public long LastUpdate { get; set; }
 
         /// <summary>
         /// Outcome label.
@@ -126,12 +127,12 @@ namespace Polymarket.Client.Websocket.Responses.User
         /// Trader side.
         /// </summary>
         [JsonProperty("trader_side")]
-        public string TraderSide { get; set; }
+        public PolymarketTradeRole TraderSide { get; set; }
 
         /// <summary>
-        /// Event timestamp.
+        /// Event Unix timestamp in seconds.
         /// </summary>
         [JsonProperty("timestamp")]
-        public string Timestamp { get; set; }
+        public long Timestamp { get; set; }
     }
 }

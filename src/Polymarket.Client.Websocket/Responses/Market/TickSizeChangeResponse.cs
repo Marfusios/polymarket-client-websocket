@@ -24,18 +24,18 @@ namespace Polymarket.Client.Websocket.Responses.Market
         /// Previous tick size.
         /// </summary>
         [JsonProperty("old_tick_size")]
-        public string OldTickSize { get; set; }
+        public decimal OldTickSize { get; set; }
 
         /// <summary>
         /// New tick size.
         /// </summary>
         [JsonProperty("new_tick_size")]
-        public string NewTickSize { get; set; }
+        public decimal NewTickSize { get; set; }
 
         /// <summary>
         /// Unix timestamp in milliseconds.
         /// </summary>
         [JsonProperty("timestamp")]
-        public string Timestamp { get; set; }
+        public long Timestamp { get; set; }
     }
 }

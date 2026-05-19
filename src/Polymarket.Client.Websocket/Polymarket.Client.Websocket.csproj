@@ -6,7 +6,7 @@
 		<Authors>Mariusz Kotas</Authors>
 		<Description>Client for Polymarket websocket APIs</Description>
 		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-		<PackageReleaseNotes>Initial release with Polymarket market, user, sports, and RTDS websocket streams.</PackageReleaseNotes>
+		<PackageReleaseNotes>Parse Polymarket websocket numeric fields into decimals/integers and expose known event, side, status, and RTDS values as enums.</PackageReleaseNotes>
 		<Copyright>Copyright 2026 Mariusz Kotas. All rights reserved.</Copyright>
 		<PackageTags>Polymarket websockets websocket client prediction markets orderbook trades</PackageTags>
 		<PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>

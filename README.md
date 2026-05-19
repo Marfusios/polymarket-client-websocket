@@ -25,6 +25,7 @@ Apache License 2.0
 - public market API, authenticated user API, sports API, and RTDS
 - targets `netstandard2.0`, `netstandard2.1`, `net6.0`, `net7.0`, `net8.0`, `net9.0`, `net10.0`
 - built on [Websocket.Client 5.5.0](https://www.nuget.org/packages/Websocket.Client/5.5.0) for websocket transport, reconnects, and lower-allocation message handling
+- typed response models: Polymarket stringified prices/sizes are parsed to `decimal`, timestamps to integer values, and known sides/statuses/topics to enums
 - reactive extensions ([Rx.NET](https://github.com/Reactive-Extensions/Rx.NET))
 - file communicator for replay/backtesting and data collection pipelines
 

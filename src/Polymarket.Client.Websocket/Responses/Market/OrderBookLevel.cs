@@ -8,15 +8,15 @@ namespace Polymarket.Client.Websocket.Responses.Market
     public class OrderBookLevel
     {
         /// <summary>
-        /// Price as sent by Polymarket.
+        /// Price.
         /// </summary>
         [JsonProperty("price")]
-        public string Price { get; set; }
+        public decimal Price { get; set; }
 
         /// <summary>
-        /// Size as sent by Polymarket.
+        /// Size.
         /// </summary>
         [JsonProperty("size")]
-        public string Size { get; set; }
+        public decimal Size { get; set; }
     }
 }

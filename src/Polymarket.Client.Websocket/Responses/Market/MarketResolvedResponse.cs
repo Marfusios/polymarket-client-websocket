@@ -12,7 +12,7 @@ namespace Polymarket.Client.Websocket.Responses.Market
         /// Market ID.
         /// </summary>
         [JsonProperty("id")]
-        public string Id { get; set; }
+        public long Id { get; set; }
 
         /// <summary>
         /// Condition ID.
@@ -42,7 +42,7 @@ namespace Polymarket.Client.Websocket.Responses.Market
         /// Unix timestamp in milliseconds.
         /// </summary>
         [JsonProperty("timestamp")]
-        public string Timestamp { get; set; }
+        public long Timestamp { get; set; }
 
         /// <summary>
         /// Market tags.
